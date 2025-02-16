@@ -1,8 +1,10 @@
 import React from 'react'
 import './listing.css'
 
-export const Listing = () => {
+ const Listing = () => {
   return (
     <div>Listing</div>
   )
 }
+
+export default Listing
