@@ -103,7 +103,7 @@ const SideBar = () => {
         <div className="circle2"></div>
 
         <h3>Help Center</h3>
-        <p>Having trouble in Panti, please contact us from for more questions.</p>
+        <p>Having trouble in Planti, please contact us from for more questions.</p>
         <button className='btn'>
           Go to help center
         </button>
