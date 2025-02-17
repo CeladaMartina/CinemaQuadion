@@ -18,7 +18,7 @@
     --normalFontSize: .938rem;
     --smallFontSize: .813rem;
     --smallestFontSize: .75rem;
-  }
+}
 
 .sideBar{
     background: var(--whiteColor);
