@@ -16,7 +16,7 @@ const SideBar = () => {
         <h2>Planti.</h2>
       </div>
 
-      <div className="menDiv">
+      <div className="menuDiv">
         <h3 className='divTitle'>
           QUICK MENU 
         </h3>
