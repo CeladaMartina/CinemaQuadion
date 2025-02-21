@@ -2,12 +2,15 @@ import express from "express"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 import movieRoute from "./route/movie.route.js"
+import cors from "cors"
 
-const app = express()
-const PORT = process.env.PORT || 4000
-// const URI = process.env.MONGO_URI
+const app = express();
+app.use(cors());
 
 dotenv.config();
+
+const PORT = process.env.PORT || 4000
+// const URI = process.env.MONGO_URI
 
 //connect to Mongo DB
 try{

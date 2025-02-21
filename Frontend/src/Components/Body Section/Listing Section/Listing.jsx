@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './listing.css'
 import { BsArrowRightShort } from "react-icons/bs";
-import { AiFillHeart, AiOutlineHeart  } from "react-icons/ai";
-
+import { AiFillHeart  } from "react-icons/ai";
+import axios from "axios"
 
 const Listing = () => {
+
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    const getMovies = async() =>{
+      try{
+        const resp = await axios.get("http://localhost:4000/movies");
+        console.log(resp.data);
+        setMovies(resp.data);
+      }catch(error){
+        console.log(error)
+      }
+    };
+    getMovies();
+  }, [])
+
   return (
     <div className='listingSection'>
       <div className="heading flex">
@@ -14,30 +30,14 @@ const Listing = () => {
         </button>
       </div>
 
-      <div className="secContainer flex">
-        <div className="singleItem">
-          <AiFillHeart className='icon' />
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjOt-GSE8NvyA7jk2sVxT0HXphpdTEQVsjg&s' alt='Image Name' />
-          <h3>Annual Vince</h3>
-        </div>
-
-        <div className="singleItem">
-          <AiFillHeart className='icon' />
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjOt-GSE8NvyA7jk2sVxT0HXphpdTEQVsjg&s' alt='Image Name' />
-          <h3>Annual Vince</h3>
-        </div>
-
-        <div className="singleItem">
-          <AiOutlineHeart className='icon' />
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjOt-GSE8NvyA7jk2sVxT0HXphpdTEQVsjg&s' alt='Image Name' />
-          <h3>Annual Vince</h3>
-        </div>
-
-        <div className="singleItem">
-          <AiOutlineHeart className='icon' />
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjOt-GSE8NvyA7jk2sVxT0HXphpdTEQVsjg&s' alt='Image Name' />
-          <h3>Annual Vince</h3>
-        </div>
+      <div className="secContainer flex">       
+          {movies.map((item) => (
+              <div className="singleItem" key={item.id}>
+                  <AiFillHeart className='icon' />
+                  <img src={item.image} alt='Image Name' />
+                  <h3>{item.name}</h3>
+              </div>
+          ))}            
       </div>
 
       <div className="sellers flex">
