@@ -18,7 +18,7 @@ const SideBar = () => {
           src="https://cdn-icons-png.flaticon.com/512/9769/9769450.png"
           alt="Image Name"
         />
-        <h2>Planti.</h2>
+        <h2>MovieVerse+</h2>
       </div>
 
       <div className="menuDiv">
@@ -89,7 +89,8 @@ const SideBar = () => {
 
           <h3>Help Center</h3>
           <p>
-            Having trouble in Planti, please contact us from for more questions.
+            Having trouble in MovieVerse+, please contact us from for more
+            questions.
           </p>
           <button className="btn">Go to help center</button>
         </div>

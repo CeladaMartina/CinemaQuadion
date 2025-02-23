@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./listing.css";
 import { BsArrowRightShort } from "react-icons/bs";
-import { AiFillHeart } from "react-icons/ai";
 import axios from "axios";
 
 const Listing = () => {
@@ -23,7 +22,7 @@ const Listing = () => {
   return (
     <div className="listingSection">
       <div className="heading flex">
-        <h1>My Listings</h1>
+        <h1>Billboard</h1>
         <button className="btn flex">
           See All <BsArrowRightShort className="icon" />
         </button>
@@ -38,7 +37,6 @@ const Listing = () => {
             className="singleItem carousel-item w-40 flex flex-col items-center p-4 rounded-lg bg-base-200"
             key={item.id}
           >
-            <AiFillHeart className="icon" />
             <img
               src={item.image}
               alt="Image Name"

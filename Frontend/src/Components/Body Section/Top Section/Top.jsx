@@ -1,18 +1,18 @@
-import React from 'react'
-import './top.css'
+import React from "react";
+import "./top.css";
 import { BiSearchAlt } from "react-icons/bi";
 import { TbMessageCircle } from "react-icons/tb";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BsArrowRightShort, BsQuestionCircle } from "react-icons/bs";
 
-import video from '../../../Videos/download.gif'
+import video from "../../../Videos/download.gif";
 
 const Top = () => {
   return (
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
-          <h1>Welcome to Planti.</h1>
+          <h1>Welcome to MovieVerse+</h1>
         </div>
 
         <div className="searchBar flex">
@@ -68,28 +68,26 @@ const Top = () => {
             {/* <div className="imgDiv">
             <img src='https://img.freepik.com/foto-gratis/planta-casa-palmera-maceta_53876-125837.jpg' alt='Image Name'/>
           </div> */}
-
-            
           </div>
 
           <div className="sideBarCard">
-              <BsQuestionCircle className="icon" />
-              <div className="cardContent">
-                <div className="circle1"></div>
-                <div className="circle2"></div>
+            <BsQuestionCircle className="icon" />
+            <div className="cardContent">
+              <div className="circle1"></div>
+              <div className="circle2"></div>
 
-                <h3>Help Center</h3>
-                <p>
-                  Having trouble in Panti, please contact us from for more
-                  questions.
-                </p>
-                <button className="btn">Go to help center</button>
-              </div>
+              <h3>Help Center</h3>
+              <p>
+                Having trouble in Panti, please contact us from for more
+                questions.
+              </p>
+              <button className="btn">Go to help center</button>
             </div>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Top
+export default Top;
