@@ -2,36 +2,19 @@ import './App.css';
 import React from 'react'
 import SideBar from './Components/SideBar Section/SideBar.jsx'
 import Body from './Components/Body Section/Body.jsx'
+import Movie from './Components/MovieSection/Movie.jsx';
+import {Routes, Route} from "react-router-dom"
 
  const App = () => {
   return (
     <div className='container'>
-      <SideBar/>
-      <Body/>
+      <SideBar/>      
+      <Routes>
+        <Route path='/' element={ <Body/>} />
+        <Route path='/movies' element={ <Movie/>} />
+      </Routes>
     </div>
   )
 }
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

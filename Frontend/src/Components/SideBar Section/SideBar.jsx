@@ -46,7 +46,7 @@ const SideBar = () => {
             </a>
           </li>
           <li className="listItem">
-            <a href="#" className='menuLink flex'>
+            <a href="/movies" className='menuLink flex'>
               <BsTrophy className='icon' />
               <span className="smallText">
                 Products
