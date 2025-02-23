@@ -11,9 +11,59 @@
   }
 }
 
-/* media queries  */
-@media screen and (max-width: 918px) {
-  .bottom {
+:root {
+  --PrimaryColor: hsl(94, 59%, 35%);
+  --HoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+
+  /* fuente y tipografia */
+
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.mainContent {
+  section {
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+
+    .container {
+      max-width: 1300px;
+      width: 100%;
+      margin: auto;
+      padding: 0px 20px;
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+          flex: 0 0 calc(33.33% - 20px);
+          max-width: calc(33.33% - 20px);
+          width: 100%;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          transition: 0.3s;
+          border: 2px solid transparent;
+        }
+      }
+    }
   }
 }

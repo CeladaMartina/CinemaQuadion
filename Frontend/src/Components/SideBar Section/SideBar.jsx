@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from "react-icons/bs";
 import { AiOutlinePieChart } from "react-icons/ai";
-import { BiTrendingUp } from "react-icons/bi";
+import { BiTrendingUp, BiSolidCameraMovie } from "react-icons/bi";
 
 const SideBar = () => {
   return (
@@ -44,8 +44,8 @@ const SideBar = () => {
           </li>
           <li className="listItem">
             <a href="/movies" className="menuLink flex">
-              <BsTrophy className="icon" />
-              <span className="smallText">Products</span>
+              <BiSolidCameraMovie className="icon" />
+              <span className="smallText">Movies</span>
             </a>
           </li>
         </ul>

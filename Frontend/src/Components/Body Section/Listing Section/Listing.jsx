@@ -23,7 +23,13 @@ const Listing = () => {
     <div className="listingSection">
       <div className="heading flex">
         <h1>Billboard</h1>
-        <button className="btn flex">
+        <button
+          className="btn flex"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "/movies";
+          }}
+        >
           See All <BsArrowRightShort className="icon" />
         </button>
       </div>
