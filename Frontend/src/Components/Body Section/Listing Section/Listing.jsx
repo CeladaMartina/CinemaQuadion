@@ -3,47 +3,9 @@ import "./listing.css";
 import { BsArrowRightShort } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import axios from "axios";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Listing = () => {
   const [movies, setMovies] = useState([]);
-
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //       initialSlide: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1
-    //     }
-    //   }
-    // ]
-  };
 
   useEffect(() => {
     const getMovies = async () => {
@@ -67,14 +29,24 @@ const Listing = () => {
         </button>
       </div>
 
-      <div className="secContainer flex">        
-          {movies.map((item) => (
-            <div className="singleItem" key={item.id}>
-              <AiFillHeart className="icon" />
-              <img src={item.image} alt="Image Name" />
-              <h3>{item.name}</h3>
-            </div>
-          ))}        
+      <div
+        className="secContainer carousel carousel-center bg-neutral rounded-box overflow-x-auto space-x-4 p-4"
+        style={{ maxWidth: "600px" }}
+      >
+        {movies.map((item) => (
+          <div
+            className="singleItem carousel-item w-40 flex flex-col items-center p-4 rounded-lg bg-base-200"
+            key={item.id}
+          >
+            <AiFillHeart className="icon" />
+            <img
+              src={item.image}
+              alt="Image Name"
+              className="w-24 h-24 object-cover"
+            />
+            <h3>{item.name}</h3>
+          </div>
+        ))}
       </div>
 
       <div className="sellers flex">

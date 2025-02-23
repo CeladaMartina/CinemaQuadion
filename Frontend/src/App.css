@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
+* {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  transition: .3s ease;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease;
 }
 
 /* Colores y estilos (Default) */
-:root{
+:root {
   --PrimaryColor: hsl(94, 59%, 35%);
   --HoverColor: #bdf094;
   --paleGreen: hsl(96, 75%, 89%);
@@ -17,7 +20,7 @@
   --blackColor: hsl(0, 0%, 18%);
   --textColor: hsl(240, 1%, 48%);
   --bgColor: hsl(220, 10%, 94%);
-  --greyText:rgb(190, 190, 190);
+  --greyText: rgb(190, 190, 190);
   --inputColor: hsl(330, 12%, 97%);
 
   /* fuente y tipografia */
@@ -26,64 +29,66 @@
   --h1FontSize: 1.5rem;
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
-  --normalFontSize: .938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
 }
 
 /* estilos Default */
 
-html{
+html {
   font-size: 90%;
 }
 
-a{text-decoration: none;}
+a {
+  text-decoration: none;
+}
 
-li{
+li {
   list-style: none;
 }
 
-.icon{
+.icon {
   font-size: var(--h2FontSize);
   cursor: pointer;
 }
 
-img{
+img {
   width: 100%;
   height: auto;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.grid{
+.grid {
   display: grid;
   align-items: center;
   gap: 1.5rem;
 }
 
-.btn{
+.btn {
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--inputColor);
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   color: var(--textColor);
 }
 
-.btn .icon{
-  margin-left: .5rem;
+.btn .icon {
+  margin-left: 0.5rem;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--paleGreen);
-  color: var(--PrimaryColor)
+  color: var(--PrimaryColor);
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +96,7 @@ body{
   padding: 1rem;
 }
 
-.container{
+.container {
   position: relative;
   width: 95vw;
   height: 95vh;
@@ -104,13 +109,13 @@ body{
   box-shadow: 2px 2px 8px var(--greyText);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
 /* media queries */
 @media screen and (max-width: 990px) {
-  .heading{
+  .heading {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -118,16 +123,15 @@ body{
 }
 
 @media screen and (max-width: 918px) {
-  .heading{
+  .heading {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
   }
 }
 
-
 @media screen and (max-width: 500px) {
-  .heading{
+  .heading {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
