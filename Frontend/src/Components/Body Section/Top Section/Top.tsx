@@ -7,7 +7,7 @@ import { BsArrowRightShort, BsQuestionCircle } from "react-icons/bs";
 
 import video from "../../../Videos/download.gif";
 
-const Top = () => {
+const Top : React.FC = () => {
   return (
     <div className="topSection">
       <div className="headerSection flex">
@@ -42,7 +42,7 @@ const Top = () => {
           </div>
 
           <div className="videoDiv">
-            <img src={video} autoPlay loop />
+            <img src={video} />
           </div>
         </div>
 

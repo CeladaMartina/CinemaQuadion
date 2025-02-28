@@ -6,11 +6,11 @@ import {
   MdOutlineExplore,
   MdOutlinePermContactCalendar,
 } from "react-icons/md";
-import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from "react-icons/bs";
+import { BsCreditCard2Front, BsQuestionCircle } from "react-icons/bs";
 import { AiOutlinePieChart } from "react-icons/ai";
 import { BiTrendingUp, BiSolidCameraMovie } from "react-icons/bi";
 
-const SideBar = () => {
+const SideBar: React.FC = () => {
   return (
     <div className="sideBar grid">
       <div className="logoDiv flex">

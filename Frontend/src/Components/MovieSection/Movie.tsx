@@ -3,17 +3,24 @@ import axios from "axios";
 import "./movie.css";
 import { TiTicket } from "react-icons/ti";
 
-const Movie = () => {
-  const [movies, setMovies] = useState([]);
+interface Movie {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
+
+const Movie: React.FC = () => {
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const resp = await axios.get("http://localhost:4000/movies");
+        const resp = await axios.get<Movie[]>("http://localhost:4000/movies");
         console.log(resp.data);
         setMovies(resp.data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     getMovies();
@@ -29,7 +36,7 @@ const Movie = () => {
                 <figure className="px-10 pt-10">
                   <img
                     src={item.image}
-                    alt="Image Name"
+                    alt={item.name}
                     className="w-24 h-24 object-cover"
                     style={{ width: "50%" }}
                   />
