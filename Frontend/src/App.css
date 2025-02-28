@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 * {
   padding: 0;
@@ -50,7 +47,6 @@ li {
 
 .icon {
   font-size: var(--h2FontSize);
-  cursor: pointer;
 }
 
 img {
@@ -61,12 +57,12 @@ img {
 .flex {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .grid {
   display: grid;
   align-items: center;
-  gap: 1.5rem;
 }
 
 .btn {
@@ -107,10 +103,6 @@ body {
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 2px 2px 8px var(--greyText);
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 /* media queries */

@@ -1,19 +1,6 @@
-.mainContent{
-    width: 82%;
-    height: 100%;
-    padding: 2rem;
-    overflow: auto;
-
-    .bottom{
-        margin-top: 2rem;
-        gap: 2rem;
-        align-items: flex-start;
-    }
+.mainContent {
+  @apply w-[82%] h-full overflow-auto p-8;
 }
-
-/* media queries  */
-@media screen and (max-width: 918px) {
-    .bottom{
-        flex-direction: column;
-    }
+.mainContent .bottom {
+  @apply gap-8 items-start mt-8;
 }
